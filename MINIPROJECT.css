@@ -1,0 +1,107 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: sans-serif;
+}
+.main_box{
+  background-image:url("photo.jpg"); 
+  background-size: cover;
+   height: 100vh; 
+}
+.btn_one i{
+    color:rgb(255,255,255,1);
+    font-size: 30px;;
+    font-weight: 700;
+    line-height: 60px;
+    position: absolute;
+    left:16px;
+    transition: all 0.4s linear;
+}
+.side_bar{
+    position: fixed;
+    left:-300px;
+    height: 100vh;
+    width: 300px;
+   background-color:rgb(255,255,255,0.1);
+   box-shadow: 0 0 8px rgb(255,255,255,0.5);
+   transition: all 0.4s linear;
+}
+.side_bar .logo {
+    position: absolute;
+     width: 100%;
+    line-height: 60px;
+   box-shadow: 0 0 5px rgb(255,255,255,0.5);
+   height: 50px;
+}
+.side_bar .logo a{
+    position: absolute;
+    left:50px;
+    color:white;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 700;
+}
+.side_bar .btn_two i{
+ color:rgb(255,255,255,0.5);
+    font-size: 25px;;
+    line-height: 60px;
+    position: absolute;
+    left: 275px;;
+    cursor: pointer;  
+    opacity: 0; 
+    transition: all 0.4s linear;
+}
+.side_bar .menu{
+    color: white;
+    position: absolute;
+    width: 100%;
+    top: 80px;
+}
+.side_bar .menu li{
+    margin-top:6px;
+    padding: 14px 20px;
+}
+.side_bar .menu i,a{
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+}
+.side_bar .menu i{
+    padding-right: 8px;
+}
+.side_bar .social_media{
+    position: absolute;
+    left: 25%;
+    top:430px;
+}
+.side_bar .social_media i{
+     color:white;
+    opacity:0.5;
+    padding:0 5px;
+}
+#check{
+    display: none;
+}
+.side_bar .menu li:hover{
+    box-shadow: 0 0 5px rgb(255,255,255,0.5);
+}
+.btn_one i:hover{
+    font-size: 35px;
+}
+.btn_two i:hover{
+
+    font-size:30px;
+}
+.side_bar .social_media i:hover{
+    opacity: 1;
+    transform: scale(1.1);
+}
+#check:checked~.side_bar{
+    left:0;
+}
+#check:checked ~ .btn_one i{
+    opacity: 0;
+}
+#check:checked~ .side_bar .btn_two i{
+    opacity: 1;
+}
